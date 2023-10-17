@@ -1,43 +1,48 @@
+
 let visitorsData = [
-    {month:"Jan",visitors:"50"},
-    {month:"Feb",visitors:"60"},
-    {month:"Mar",visitors:"70"},
-    {month:"Apr",visitors:"80"},
-    {month:"May",visitors:"90"},
-    {month:"Jun",visitors:"200"},
+    {month:"MONTH",visitors:"VISITORS"},
+    { month: "Jan", visitors: "50" },
+    { month: "Feb", visitors: "60" },
+    { month: "Mar", visitors: "70" },
+    { month: "Apr", visitors: "80" },
+    { month: "May", visitors: "90" },
+    { month: "Jun", visitors: "200" },
 ];
 
+let table = document.querySelector(".visitorsTable");
+
 let tableTag = document.createElement("table");
+table.appendChild(tableTag);
 let tableNameTag = document.createElement("h2");
-tableNameTag.appendChild("The number of site visitors each month for the last 6 months");
+tableTag.appendChild(tableNameTag);
 
- // how to console.log to find the bug frm here??
+let tableName = document.createTextNode("The number of site visitors each month for the last 6 months");
+tableNameTag.appendChild(tableName);
+
+let tableRow = document.createElement("tr");
+tableTag.appendChild(tableRow);
+let tableHead = document.createElement("th");
+tableTag.appendChild(tableHead);
+let tableData = document.createElement("td");
+tableRow.appendChild(tableData);
+
+// let month = document.createTextNode("MONTH");
+// tableHead.appendChild(month);
 
 
-let tableRowM = document.createElement("tr");
-let tableRowV = document.createElement("tr");
 
-let tableHeadM = document.createElement("th");
-let tableHeadV = document.createElement("th");
+// let monthText = document.createTextNode("MONTH");
+// tableHead.appendChild(monthText);
+// let visitorsText = document.createTextNode("VISITORS");
+// tableHead.appendChild(visitorsText);
 
-let tableDataM = document.createElement("td");
-let tableDataV = document.createElement("td");
 
-tableTag.appendChild(tableRowM);
-tableTag.appendChild(tableRowV);
 
-tableRowM.appendChild(tableHeadM);tableHeadM.appendChild("Month");
-tableRowM.appendChild(tableDataM);
-
-tableRowV.appendChild(tableHeadV);tableHeadV.appendChild(Visitors);
-tableRowV.appendChild(tableDataV);
-
-for(let i=0; i<visitorsData.length; i++){
-    console.log("swsws");
-    tableDataM(visitorsData.month[i]);
-    tableDataV(visitorsData.visitors[i]);
+for (let i=1; i < visitorsData.length; i++) {
+    let monthRow = document.createTextNode(visitorsData[i].month);
+    tableData.appendChild(monthRow);
+    
 };
 
-let table = document.getElementById("#visitorsTable");
-table.appendChild(tableTag);
-console.log("i hate this");
+
+
