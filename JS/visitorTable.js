@@ -1,6 +1,6 @@
 
 let visitorsData = [
-    {month:"MONTH",visitors:"VISITORS"},
+    { month: "MONTH", visitors: "VISITORS" },
     { month: "Jan", visitors: "50" },
     { month: "Feb", visitors: "60" },
     { month: "Mar", visitors: "70" },
@@ -9,10 +9,10 @@ let visitorsData = [
     { month: "Jun", visitors: "200" },
 ];
 
-let table = document.querySelector(".visitorsTable");
+let div = document.querySelector(".visitorsTable");
 
 let tableTag = document.createElement("table");
-table.appendChild(tableTag);
+div.appendChild(tableTag);
 let tableNameTag = document.createElement("h2");
 tableTag.appendChild(tableNameTag);
 
@@ -21,27 +21,26 @@ tableNameTag.appendChild(tableName);
 
 let tableRow = document.createElement("tr");
 tableTag.appendChild(tableRow);
-let tableHead = document.createElement("th");
-tableTag.appendChild(tableHead);
-let tableData = document.createElement("td");
-tableRow.appendChild(tableData);
 
-// let month = document.createTextNode("MONTH");
-// tableHead.appendChild(month);
+for (let i = 1; i < visitorsData.length; i++) {
+    let tableHead = document.createElement("th");
+    tableRow.appendChild(tableHead);
+    tableHead.textContents = visitorsData[0].month; //?
+    let tableData = document.createElement("td");
+    tableRow.appendChild(tableData);
+    let month = document.createTextNode(visitorsData[i].month);
+    tableData.appendChild(month);
+};
 
-
-
-// let monthText = document.createTextNode("MONTH");
-// tableHead.appendChild(monthText);
-// let visitorsText = document.createTextNode("VISITORS");
-// tableHead.appendChild(visitorsText);
-
-
-
-for (let i=1; i < visitorsData.length; i++) {
-    let monthRow = document.createTextNode(visitorsData[i].month);
-    tableData.appendChild(monthRow);
-    
+for (let i = 1; i < visitorsData.length; i++) {
+    let tableHead = document.createElement("th");
+    tableRow.appendChild(tableHead);
+    tableHead.textContents = visitorsData[0].visitors; //?
+    let tableData = document.createElement("td");
+    tableRow.appendChild(tableData);
+    let visitors = document.createTextNode(visitorsData[i].visitors);
+    tableData.appendChild(visitors);
+    console.log(visitors)
 };
 
 
