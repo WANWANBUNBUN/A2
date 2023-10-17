@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Snack A Day</title>
+    <link rel="icon" href="../images/headLogo/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <img src="../images/headLogo/headLogo.png" style="width:100px;height:null;">
+        <nav>
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="aboutPage.html">About</a></li>
+                <li><a href="contactPage.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="process-contact.php" method="POST">
+            <fieldset>
+                <legend>Contact Us</legend>
+                <ul>
+                    <li>
+                        <label for="name">Name</label>
+                        <input name="name" required>
+                    </li>
+                    <li>
+                        <lable for="email" placeholder="---@---" />Email</lable>
+                        <input email="email" required>
+                    </li>
+                    <li>
+                        <lable for="categoryInterests">Category Intrests</lable>
+                        <ul>
+                            <li><input type="checkbox">Career</li> <!--how to make at least choose one??-->
+                            <li><input type="checkbox">Industry</li>
+                            <li><input type="checkbox">Technical</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <lable for="yourRole">Your Role</lable>
+                        <input type="radio" name="Role">Writer <!--how to make at least choose one??-->
+                        <input type="radio" name="Role">Contributor
+                        <input type="radio" name="Role">Administrator
+                    </li>
+                    <input type="submit">
+                </ul>
+            </fieldset>
+        </form>
+    </main>
+    <section>
+        <footer>
+            <p>The cookie is used on xxxxx</p>
+            <a href="#">Accept Coocies</a>
+        </footer>
+    </section>
+</body>
+
+</html>
