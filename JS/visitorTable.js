@@ -9,7 +9,6 @@ let visitorsData = [
 ];
 
 let div = document.querySelector(".visitorsTable");
-
 let tableTag = document.createElement("table");
 div.appendChild(tableTag);
 let tableNameTag = document.createElement("h2");
