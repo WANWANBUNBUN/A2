@@ -14,8 +14,8 @@ div.appendChild(tableTag);
 let tableNameTag = document.createElement("h2");
 tableTag.appendChild(tableNameTag);
 
-let tableName = document.createTextNode("The number of site visitors each month for the last 6 months");
-tableNameTag.appendChild(tableName);
+//let tableName = document.createTextNode("The number of site visitors each month for the last 6 months");
+//tableNameTag.appendChild(tableName);
 
 let monthRow = document.createElement("tr");
 tableTag.appendChild(monthRow);
