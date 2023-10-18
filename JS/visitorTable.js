@@ -1,6 +1,5 @@
 
 let visitorsData = [
-    { month: "MONTH", visitors: "VISITORS" },
     { month: "Jan", visitors: "50" },
     { month: "Feb", visitors: "60" },
     { month: "Mar", visitors: "70" },
@@ -19,29 +18,22 @@ tableTag.appendChild(tableNameTag);
 let tableName = document.createTextNode("The number of site visitors each month for the last 6 months");
 tableNameTag.appendChild(tableName);
 
-let tableRow = document.createElement("tr");
-tableTag.appendChild(tableRow);
+let monthRow = document.createElement("tr");
+tableTag.appendChild(monthRow);
 
-for (let i = 1; i < visitorsData.length; i++) {
+for(let i=0; i<visitorsData.length; i++){
     let tableHead = document.createElement("th");
-    tableRow.appendChild(tableHead);
-    tableHead.textContents = visitorsData[0].month; //?
-    let tableData = document.createElement("td");
-    tableRow.appendChild(tableData);
-    let month = document.createTextNode(visitorsData[i].month);
-    tableData.appendChild(month);
-};
+    tableHead.textContent = visitorsData[i].month;
+    monthRow.appendChild(tableHead);
+}
 
-for (let i = 1; i < visitorsData.length; i++) {
-    let tableHead = document.createElement("th");
-    tableRow.appendChild(tableHead);
-    tableHead.textContents = visitorsData[0].visitors; //?
-    let tableData = document.createElement("td");
-    tableRow.appendChild(tableData);
-    let visitors = document.createTextNode(visitorsData[i].visitors);
-    tableData.appendChild(visitors);
-    console.log(visitors)
-};
+let visitorsRow = document.createElement("tr");
+tableTag.appendChild(visitorsRow);
 
+for(let i=0; i<visitorsData.length; i++){
+    let tableData = document.createElement("td");
+    tableData.textContent = visitorsData[i].visitors;
+    visitorsRow.appendChild(tableData);
+}
 
 
